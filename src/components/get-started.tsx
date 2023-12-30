@@ -46,7 +46,7 @@ export default function HomeForm() {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="secondary" disabled={!validSlug}>
-            Join as host ddddddd
+            Join as host ttttttttttttttttt
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
