@@ -23,6 +23,8 @@ export default function HomeForm() {
   const [validSlug, setValidSlug] = useState(false);
   const router = useRouter();
 
+  console.log('theme', slug);
+
   useEffect(() => {
     try {
       slugSchema.parse(slug);
@@ -46,7 +48,7 @@ export default function HomeForm() {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="secondary" disabled={!validSlug}>
-            216342827923
+            222
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
