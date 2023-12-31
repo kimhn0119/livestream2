@@ -45,6 +45,9 @@ export default function CreateIngressForm({
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
 
+    
+  console.log('theme',  values.roomSlug);
+   
     await resetIngresses();
 
 

@@ -84,7 +84,6 @@ export async function createIngress(
 export async function resetIngresses() {
   const ingresses = await ingressClient.listIngress({});
 
-  console.log('theme', ingresses);
 
   for (const ingress of ingresses) {
     if (ingress.ingressId) {
