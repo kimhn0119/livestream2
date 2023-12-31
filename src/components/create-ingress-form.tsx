@@ -1,6 +1,7 @@
 "use client";
 
 import { createIngress } from "@/app/actions";
+import { resetIngresses } from "@/app/actions";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { IngressInput, type IngressInfo } from "livekit-server-sdk";
 import Link from "next/link";
@@ -43,6 +44,10 @@ export default function CreateIngressForm({
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
+
+    await resetIngresses();
+
+
     const ingressInfo = await createIngress(
       values.roomSlug,
       parseInt(values.ingressType)
